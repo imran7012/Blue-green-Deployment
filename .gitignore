@@ -1,4 +1,4 @@
 node_modules
-Dockerfile
-.env
+#Dockerfile
+#.env
 package-lock.json
