@@ -1,0 +1,15 @@
+{
+  "spec": {
+    "selector": {
+      "app": "frontend",
+      "version": "green"
+    },
+    "ports": [
+      {
+        "port": 80,
+        "targetPort": 3200,
+        "nodePort": 30007
+      }
+    ]
+  }
+}
