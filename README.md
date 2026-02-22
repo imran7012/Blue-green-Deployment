@@ -1,20 +1,20 @@
 # Blue-Green Deployment Project
 
-  ## Part 1 — Local Deployment
+  # Part 1 — Local Deployment
   
   
-  ## Project Setup
+  # Project Setup
   
-  ### 1. Clone the Repository
+  # 1. Clone the Repository
 
   git clone <your-repository-url>
   cd blue-green-project
  
 ----
 
-  ### 2. Local Development
+  # 2. Local Development
   
-  #### Backend Setup
+  # Backend Setup
     1. Navigate to backend directory
     2. Install dependencies
  
@@ -34,7 +34,7 @@
        
 ----
   
-  #### Frontend Setup
+  # Frontend Setup
   
     1. Setup Blue Frontend
  
@@ -64,24 +64,26 @@
 
 -----
 
-### 3. Dockerization
+# 3. Dockerization
 
-#### Build Docker Images
 
-# Build Backend Image
+### Build Backend Image
+
 docker build -t imran7012/backend:latest .
 
-# Build Blue Frontend Image
+### Build Blue Frontend Image
+
 docker build -t your-username/frontend-blue:latest .
 
-# Build Green Frontend Image
+### Build Green Frontend Image
+
 docker build -t your-username/frontend-green:latest .
 
 
 <img width="1902" height="747" alt="image" src="https://github.com/user-attachments/assets/1f7de074-8028-4220-a67a-4fc2459058d1" />
 
 
-# Run Containers
+### Run Containers
 docker-compose up -d
 
 <img width="1518" height="203" alt="image" src="https://github.com/user-attachments/assets/a3025abc-0d65-49f8-ab27-e98a06c5b09e" />
@@ -89,14 +91,12 @@ docker-compose up -d
 -----
 
 
-### 4. Kubernetes Deployment
-
-#### Docker-desktop kubernetes
+# 4. Kubernetes Deployment
 
 
-### 5. Create Kubernetes Manifest Files
+ # Create Kubernetes Manifest Files
 
-#### Required Manifest Files
+### Required Manifest Files
 Create following files in `k8s/` directory:
 - `backend-deployment.yaml`
 - `frontend-blue-deployment.yaml`
@@ -105,12 +105,12 @@ Create following files in `k8s/` directory:
 
 -----
 
-### 6. Deploy to Minikube
+# Deploy to Minikube
 
-# Apply all manifests
+### Apply all manifests
 kubectl apply -f k8s/
 
-# Verify deployments
+### Verify deployments
 kubectl get deployments
 kubectl get services
 kubectl get pods
@@ -120,9 +120,9 @@ kubectl get svc
 
 -----
 
-### 7. Blue-Green Switching
+# Blue-Green Switching
 
-#### Switch Traffic Methods
+## Switch Traffic Methods
 
 ## Create file patch.json
 
